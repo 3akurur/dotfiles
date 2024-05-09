@@ -8,3 +8,8 @@ for i in \
     ln -sf $PWD/$i $HOME/$i
   fi
 done
+
+mkdir -p $HOME/.config/git
+if [ ! -s $HOME/.config/git/ignore ]; then
+  ln -sf $PWD/.config/git/ignore $HOME/.config/git/ignore
+fi
